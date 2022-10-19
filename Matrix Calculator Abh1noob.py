@@ -22,7 +22,11 @@ def subtraction():
     tk.Label(root,text= "-").place(y='24',x='108')
 
 def multiplication():
-    pass
+    tk.Label(root,text=(((int(a11.get()))*(int(b11.get())))+((int(a12.get()))*(int(b21.get())))), bg = "white", width = '5',borderwidth=2, relief="groove").place(y='10',x='250')
+    tk.Label(root,text=(((int(a11.get()))*(int(b12.get())))+((int(a12.get()))*(int(b22.get())))), bg = "white", width = '5',borderwidth=2, relief="groove").place(y='10',x='300')
+    tk.Label(root,text=(((int(a21.get()))*(int(b11.get())))+((int(a22.get()))*(int(b21.get())))), bg = "white", width = '5',borderwidth=2, relief="groove").place(y='40',x='250')
+    tk.Label(root,text=(((int(a21.get()))*(int(b12.get())))+((int(a22.get()))*(int(b22.get())))), bg = "white", width = '5',borderwidth=2, relief="groove").place(y='40',x='300')
+    tk.Label(root,text= "x").place(y='24',x='108')
 
 #Initialising tkinter
 root = tk.Tk()
@@ -66,5 +70,6 @@ tk.Label(root,text="=").place(y='24',x = '230')
 #Operation Buttons
 add=tk.Button(root,text='Addition',command=addition,width = 10).place(y='70',x='10')
 sub=tk.Button(root,text='Subtraction',command=subtraction,width = 10).place(y='70',x='95')
+mul=tk.Button(root,text='Multiplication',command=multiplication,width = 10).place(y='70',x='185')
 
 root.mainloop()
